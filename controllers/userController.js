@@ -13,4 +13,17 @@ const registerUser = (req, res) => {
     });
 }
 
-module.exports = { registerUser };
+const getUser = (req, res) => {
+    // console.log("request in controller");
+    // const { name, email, password, phone} = req.body;
+
+    const user = userModel.fetch();
+
+    res.status(201).json({
+        success: true,
+        message: 'User fetch successfully',
+        data: user
+    });
+}
+
+module.exports = { registerUser,getUser};

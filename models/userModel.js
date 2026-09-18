@@ -6,6 +6,14 @@ const User = {
             email: userData.email,
             phone : userData.phone
         }
+    },
+     fetch: () => {
+        return {
+            id: Date.now().toString(),
+            name: "Huma",
+            email: "huma@gmail.com",
+            phone : "03123456789"
+        }
     }
 }
 
